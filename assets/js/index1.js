@@ -170,7 +170,7 @@ function cliencode_check() {
             window.location = "Retailer.html";
         }
         else {
-            window.location = "HomePage.html"
+            window.location = "SRepresentation.html"
         }
 
     }
