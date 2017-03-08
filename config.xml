@@ -1,5 +1,5 @@
 <widget xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0" id="com.GBC.TiaERPApp" versionCode="230" version="2.0.2">
-  <name>TiaERP@App</name>
+  <name>Ultimed08/03</name>
   <description>A software for business that does everything. From controlling your business to improving your profits and more.</description>
   <author href="http://phonegap.com" email="support@phonegap.com">Yashaswi</author>
   <content src="index.html"/>
