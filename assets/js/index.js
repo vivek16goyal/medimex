@@ -4,9 +4,9 @@
 
 //varible hold loading msg
 var loadmsg="Please Wait....";
-//var GBCServicePath = "http://tiaapp.goyalonline.in/";
+var GBCServicePath = "http://tiaapp.goyalonline.in/";
 
-var GBCServicePath = "http://localhost:51738/";
+//var GBCServicePath = "http://localhost:51738/";
 var isprint = '0';
 var pictureSource;
 var destinationType;
