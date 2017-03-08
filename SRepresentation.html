@@ -3,14 +3,10 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1 , user-scalable=no">
-    <title>TiaERP@App</title>
-    <link rel=" stylesheet" href="assets/css/jqm-demos.css">
-    <link rel="stylesheet" href="css/themes/default/jquery.mobile-1.4.5.min.css">
-    <link rel=" stylesheet" href="assets/css/animate.css">
-    <link rel=" stylesheet" href="assets/css/TableCSSCode.css">
-    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
-    <link href="assets/css/slidemenu.css" rel="stylesheet">
-
+    <title>UltiMED</title>
+    
+     <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/jquery-1.9.js"></script>
     <script type="text/javascript" src="cordova.js"></script>
     <script src="js/jquery.js"></script>
     <script src="js/jquery.mobile-1.4.5.min.js"></script>
@@ -19,7 +15,13 @@
     <script src="assets/js/iscroll-zoom.js"></script>
     <script src="assets/js/jquery.slidemenu.js"></script>
     <script src="assets/js/index.js"></script>
-
+    <script src="assets/js/index12.js"></script>
+   <link rel=" stylesheet" href="assets/css/jqm-demos.css">
+    <link rel="stylesheet" href="css/themes/default/jquery.mobile-1.4.5.min.css">
+    <link rel=" stylesheet" href="assets/css/animate.css">
+    <link rel=" stylesheet" href="assets/css/TableCSSCode.css">
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="assets/css/slidemenu.css" rel="stylesheet">
     <script>
 
         function CheckEmail(e) {
@@ -303,217 +305,7 @@
         </div>
     </div>
 
-    <div data-role="page" id="Item-cart" class="jqm-demos">
-        <div data-role="header" data-position="fixed" data-theme="true" class="jqm-header">
-            <h1 style="color: white;">Cart</h1>
-            <img src="assets/img/green.gif" alt="Online" class="ui-btn-right alert-imgOn activeImg">
-            <a onclick="fun_nextItem()" data-transition="flip" data-icon="plus" data-iconpos="notext" style="background-color: white;">Add</a>
-
-        </div>
-        <!-- /header -->
-        <div role="main" class="ui-content">
-            <div class="btn-div" style="margin-left: 25vw; width: 40vw;" id="Empty-basket">
-                <center>
-                    <table>
-                        <tr>
-                            <td id="td-ord" onclick="fun_nextItem()">
-                                <a><img src="assets/img/cart.png"></a>
-                                <center>
-                                    <p style="font-weight:bold;">Your Basket Is Empty. Please Add Item</p>
-                                </center>
-                            </td>
-                        </tr>
-                    </table>
-                </center>
-            </div>
-            <div id="Item-grid-table">
-                <center>
-                    <p id="itm-cnt" style="margin-top:-8px;margin-bottom:0px;"></p>
-                    <table style="width:90%" id="cart-tbl-amt">
-                        <tr>
-                            <td><label>GrossAmt</label></td>
-                            <td style="float:right"><label id="cart-grs" style="color:#1390cf;margin-right:1vmin"></label></td>
-                            <td><label>NetAmt</label></td>
-                            <td style="float:right"><label id="cart-net" style="color:#1390cf"></label></td>
-                        </tr>
-                    </table>
-                    <label id="cart-total-amt" style="color:#1390cf;margin-top:5px;"></label>
-                    <img alt="Prescription" id="order_pre" style="display:none;width:150px;height:150px;" src="icon.png"/>
-                </center>
-                <div data-theme="b" class="my-page" style="margin-top: -32px;">
-
-                    <div role="main" class="ui-content" style="overflow-x: visible; width: 90%" id="grid_Ord">
-                        <ul data-role="listview" data-inset="true" id="Itm_Grid" class="touch" data-icon="false" data-split-icon="delete"></ul>
-                    </div>
-                    <div role="main" class="ui-content" style="overflow-x: visible; width: 90%" id="grid_Wsal">
-                        <ul data-role="listview" data-inset="true" id="Itm_GridWSale" class="touch" data-icon="false" data-split-icon="delete"></ul>
-                    </div>
-                    <div role="main" class="ui-content" style="overflow-x: visible; width: 90%" id="grid_Sale">
-                        <ul data-role="listview" data-inset="true" id="Itm_GridSale" class="touch" data-icon="false" data-split-icon="delete"></ul>
-                    </div>
-                    <div role="main" class="ui-content" style="overflow-x: visible; width: 90%" id="grid_QTTN">
-                        <ul data-role="listview" data-inset="true" id="Itm_GridQTTN" class="touch" data-icon="false" data-split-icon="delete"></ul>
-                    </div>
-                    <div role="main" class="ui-content" style="overflow-x: visible; width: 90%" id="grid_QTNW">
-                        <ul data-role="listview" data-inset="true" id="Itm_GridQTNW" class="touch" data-icon="false" data-split-icon="delete"></ul>
-                    </div>
-                    <table class="ui-content" style="margin-top: -30px; margin-left: 10px; padding: 0; width: 90%;">
-                        <tr>
-                            <td>
-                                <a data-transition="flip">
-                                    <div class="ui-btn ui-input-btn ui-corner-all ui-shadow " style="background: #1390cf" onclick="fun_nextItem()">
-                                        <img id="Add-item" src="assets/img/add.png" alt="Add Item">
-                                    </div>
-                                </a>
-                            </td>
-                            <!--<td id="td-invioce-nxt">
-                                <a ><div id="div-img-save" class="ui-btn ui-input-btn ui-corner-all ui-shadow" style="background: #1390cf" ><img id="save" src="assets/img/arrow-right.png" alt="Save"></div></a>
-                            </td>-->
-                            <td id="td-order-nxt">
-
-                                <a id="id_aPTDR-body" href="#PTDR-Info-Search" data-transition="flip" data-position-to="window" style="display: none"></a>
-                                <a id="id_ainvoice-item-btn2-body" href="#invoice-item-btn2-body" data-rel="popup" data-transition="flip" data-position-to="window" style="display: none"></a>
-                                <a id="A5" href="#DivordType" data-rel="popup" data-transition="flip" data-position-to="window" style="display: none"></a>
-                                <a>
-                                    <div onclick="nxt_itemCart()" class="ui-btn ui-input-btn ui-corner-all ui-shadow  ui-mini" style="background: #1390cf">
-                                        <img src="assets/img/arrow-right.png" alt="nxt">
-                                    </div>
-                                </a>
-                            </td>
-                            <td>
-                                <a>
-                                    <div class="ui-btn ui-input-btn ui-corner-all ui-shadow" style="background: #1390cf" onclick="fun_cancel()">
-                                        <img id="Cancel-tmgrid" src="assets/img/cancel1.png" alt="Canecl">
-                                    </div>
-                                </a>
-                            </td>
-                        </tr>
-
-                    </table>
-
-                    <button style="display: none;" class="show-page-loading-msg" data-theme="b" data-textonly="false" data-textvisible="true" data-msgtext="Saving Data..." data-inline="true">B</button>
-                    <button style="display: none;" class="hide-page-loading-msg" data-inline="true" data-icon="delete">Hide</button>
-                </div>
-            </div>
-
-        </div>
-        <!-- /content -->
-        <div id="confirm" class="ui-content" data-role="popup" data-theme="a">
-            <p id="question">Are you sure you want to delete this item?</p>
-            <div class="ui-grid-a">
-                <div class="ui-block-a">
-                    <a id="yes" class="ui-btn ui-corner-all ui-mini ui-btn-a" data-rel="back">Yes</a>
-                </div>
-                <div class="ui-block-b">
-                    <a id="cancel" class="ui-btn ui-corner-all ui-mini ui-btn-a" data-rel="back">Cancel</a>
-                </div>
-            </div>
-        </div>
-        <!-- /popup -->
-        <div data-role="popup" id="DivordType" data-dismissible="false" data-theme="a" data-overlay-theme="b">
-            <a id="close_DivordType" class="jqm-search-link ui-btn ui-btn-icon-notext ui-corner-all ui-icon-delete ui-nodisc-icon ui-alt-icon ui-btn-right close-img " style="background-color: #1390cf;" data-rel="back"></a>
-            <div class="ui-field-contain" style="margin: 15px; width: 257px;">
-                <label for="Select1">Order Type:</label>
-                <select id="Select1" data-native-menu="false" class="filterable-select" onchange="SaveOrderType(this)">
-                </select>
-                <div id="divOrderPTDR">
-                    <table>
-                        <tr>
-                            <td>Patient:
-                            </td>
-                            <td>
-                                <input type="text" id="ordPatient" placeholder="Patient Name..." data-theme="a" data-type="search" />
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Doctor:
-                            </td>
-                            <td>
-                                <input type="text" id="ordDoctor" placeholder="Doctor Name..." data-theme="a" data-type="search" />
-                                <div id="Div13" style="width: 90%" class="display-none">
-                                    <label style="margin-top: -5px;" id="Label6"></label>
-                                </div>
-                            </td>
-                        </tr>
-                    </table>
-                </div>
-                <br />
-                <center>
-                    <a onclick="show_SaveWin()" style="background: #1390cf;padding:5px 35px 5px 35px; color:white;border:none;cursor:pointer;text-decoration:none">OK</a>
-                </center>
-            </div>
-        </div>
-        <div data-role="popup" id="invoice-item-btn2-body" data-dismissible="false" data-theme="a" data-overlay-theme="b">
-            <a class="jqm-search-link ui-btn ui-btn-icon-notext ui-corner-all ui-icon-delete ui-nodisc-icon ui-alt-icon ui-btn-right close-img " style="background-color: #1390cf;" data-rel="back"></a>
-
-            <table class="ui-content" style="width: 90%;">
-                <tr>
-                    <td onclick="SaveOrderWsale('0')">
-                        <div class="ui-btn ui-input-btn ui-corner-all ui-shadow " style="background: #1390cf">
-                            <img id="savef" src="assets/img/save.png" alt="Save">
-                        </div>
-                    </td>
-                    <td onclick="SaveOrderWsale('1')">
-                        <div class="ui-btn ui-input-btn ui-corner-all ui-shadow " style="background: #1390cf">
-                            <img id="print" src="assets/img/print.png" alt="Save&Print">
-                        </div>
-                    </td>
-                    <td>
-                        <div class="ui-btn ui-input-btn ui-corner-all ui-shadow" style="background: #1390cf" onclick="fun_cancel()">
-                            <img id="Cancelf" src="assets/img/cancel.png" alt="Canecl">
-                        </div>
-                    </td>
-                </tr>
-            </table>
-
-        </div>
-
-
-        <div data-role="panel" id="div-Detail-Ord" data-position="right" data-display="push" data-theme="a">
-            <div class="ord-header">
-                <label style="margin-left: 2.2em">Voucher Details</label>
-            </div>
-            <div class="ord-det">
-                <p>Sale Rep</p>
-                <a>
-                    <label id="d-lbl-salerep"></label>
-                </a>
-                <p>Party Name</p>
-                <a onclick="show_PartyWin()" data-transition="flip">
-                    <label id="d-lbl-party"></label>
-                </a>
-                <p>Cart Details</p>
-                <a data-rel="close">
-                    <label id="d-lbl-cnt" class="cart-cnt-lbl"></label>
-                </a>
-                <div id="ImgDiv">
-                    <div class="full_image">
-                        <img id="Img15" alt="NoImage" onclick="FullSize()" style="width: 150px; height: 100px" />
-                        <a href="#" class="full_close" style="font-size: small" onclick="Close_img()">X</a>
-                    </div>
-                    <a href="#ImageSelect" data-transition="flip">
-                        <div class="ui-btn ui-input-btn ui-corner-all ui-shadow  ui-mini" style="background: #1390cf; padding: 5px; width: 40px; float: right; display: inline; margin-top: 0px;" id="div14">
-                            <img src="assets/img/images.png" alt="Browse Image">
-                        </div>
-                    </a>
-                </div>
-                <p>Bill Amount</p>
-                <span>
-                    <img src="assets/img/rupee.png" alt="Rs" class="rupes" />
-                </span><span class="amt-color" id="d-lbl-amt"></span>
-            </div>
-        </div>
-
-        <div data-role="footer" data-position="fixed" class="my-footer">
-            <a onclick="BackButton()" data-icon="carat-l" data-iconpos="notext" style="float: left;" class="footer-img">Back</a>
-            <a onclick="homePage()" data-transition="flip" data-icon="home" data-iconpos="notext" class="footer-img">home</a>
-            <a data-icon="check" data-iconpos="notext" onclick="Save()" class="footer-img">Save</a>
-            <a data-icon="action" data-iconpos="notext" class="footer-img" onclick="fun_cancel()">exit</a>
-            <!--<a href="#invoice-item-btn2-body" data-rel="popup" data-transition="flip" data-position-to="window" data-icon="carat-r" data-iconpos="notext" class="footer-img">next</a>-->
-            <!--<a href="#div-Detail-Ord" data-icon="eye" data-iconpos="notext" style="float: right;" class="footer-img" onclick="SetInvoiceDtl()">Back</a>-->
-            <a onclick="BackButton()" data-icon="carat-r" data-iconpos="notext" style="float: right;" class="footer-img">next</a>
-        </div>
-    </div>
+   
 
     <div data-role="page" id="Item-Info-Search" class="jqm-demos">
 
@@ -566,7 +358,7 @@
     </div>
 
     <div data-role="page" id="Item-Info-Search-Body" data-title="Inbox" class="jqm-demos">
-
+<div >
         <div data-role="header" data-position="fixed" class="jqm-header">
             <img src="assets/img/green.gif" alt="Online" class="ui-btn-left alert-imgOn activeImg">
             <div>
@@ -681,7 +473,7 @@
             <a data-icon="carat-r" data-iconpos="notext" style="margin: 10px; float: right" class="footer-img" onclick="fun_showCart()">next</a>
         </div>
     </div>
-
+</div>
     <div data-role="page" id="Party-Info-Search" class="jqm-demos" data-title="Inbox">
 
         <div data-role="header" data-position="fixed" class="jqm-header">
@@ -781,7 +573,7 @@
             <a data-rel="back" data-icon="carat-l" data-iconpos="notext" style="margin-left: 10px; background-color: white;">Back</a>
             <!--<img id="Img8" src="assets/img/green.gif" alt="Online" class="ui-btn-right alert-imgOn activeImg">-->
             <h2 id="heading" style="color: white;">Party Ledger</h2>            
-            <a  data-icon="mail" data-iconpos="notext" style="margin-right: 10px; background-color: white;" href="#Mail-Body" data-rel="popup" data-transition="slidedown">Back</a>
+            <a onclick="SetEmailDefaultValue()"  data-icon="mail" data-iconpos="notext" style="margin-right: 10px; background-color: white;" href="#Mail-Body" data-rel="popup" data-transition="slidedown">Back</a>
         </div>
         <center>
             <div style="width:92%">
@@ -801,7 +593,7 @@
                                     Subject:
                                 </td>
                                 <td>
-                                    <input type="text" data-theme="a" id="txt_ldgSubject" />
+                                    <input type="text" data-theme="a" id="txt_ldgSubject" value="Party Ledger" />
                                 </td>
                             </tr>
                             <tr>
@@ -1153,7 +945,7 @@
 
     </div>
 
-    <div data-role="page" id="ImageSelect" class="jqm-demos">
+    <!--<div data-role="page" id="ImageSelect" class="jqm-demos">
         <div data-role="header" data-position="fixed" class="jqm-header">
             <img id="Img5" src="assets/img/green.gif" alt="Online" class="ui-btn-left alert-imgOn activeImg">
             <div class="display-none" id="Div3">
@@ -1188,6 +980,52 @@
                                 </td>
                             </tr>
                        </table> 
+                </center>
+            </div>
+        </div>
+    </div>-->
+
+    <div data-role="page" id="ImageSelect" class="jqm-demos">
+        <div data-role="header" data-position="fixed" class="jqm-header">
+            <img id="Img5" src="assets/img/green.gif" alt="Online" class="ui-btn-left alert-imgOn activeImg">
+            <div class="display-none" id="Div3">
+                <a href="#Item-cart" data-transition="flip">
+                    <img id="img7" src="assets/img/icon-cart.png" alt="Cart" class="cart-img" onclick="fun_showCart()">
+                    <label onclick="fun_showCart()" id="Label1" class="ui-btn-right " style="display: none; text-indent: 1px; padding: 5px; background-color: #4b4b4b; color: white; border-radius: 19px; font-weight: bold; font-size: 11px;"></label>
+                </a>
+            </div>
+            <h2 id="h5" class="GenralizedApHeading" style="font-weight: normal; color: white; text-align: center; width: 76vw; margin: 0 10vw"></h2>
+            <center>
+            <img src="assets/img/Header.png" style="width:130px;height:30px;margin-top:10px;border-radius:20px;" alt="jQuery Mobile" >
+                </center>
+        </div>
+        <div role="main" class="ui-content">
+            <div class="body-with-shadow">
+                <center> 
+            <label class="theme-color-txt-red" style="font-size:16px;padding:0px;">Prescription</label>   
+            <p style="margin:0px;">You can upload prescription here..</p>    
+        <div class="full_image">
+            <img id="sel_image" src="assets/img/No_image.png" alt="NoImage" onclick="FullSize()"/>
+            <a href="#" class="full_close theme-color-btn" style="padding:2px;" onclick="Close_img()">X</a>
+           <!-- <a href="#" class="full_left " style="padding:2px;" onclick="RotateLeft()"><img id="Img15" src="assets/img/Left.png" alt="NoImage" style="width:29px;height:29px" /></a> 
+            <a href="#" class="full_right " style="padding:2px;" onclick="RotateRight()"><img id="Img19" src="assets/img/Right.png" alt="NoImage" style="width:25px;height:25px" /></a>           -->
+        </div>        
+        <table class="ui-content tbl-btn-nxt-rev" style="margin-left:-3px;margin-top:-1px;">
+                <tr>
+                    <td>
+                        <a data-rel="back"><div  class="ui-btn ui-input-btn ui-corner-all ui-shadow  ui-mini theme-color-btn" style="background: #1390cf" id="div5" onclick="highlight_Control('div5')"> <img src="assets/img/arrow-left.png" alt="prev"></div></a>
+                    </td>  
+                    <td>
+                        <a  onclick="capturePhotoEdit()"><div class="ui-btn ui-input-btn ui-corner-all ui-shadow  ui-mini theme-color-btn" style="background: #1390cf" id="div1" onclick="highlight_Control('div1')"> <img src="assets/img/camera.png" alt="prev"></div></a>
+                    </td>                               
+                    <td>
+                        <a onclick="getPhoto(pictureSource.PHOTOLIBRARY);"><div class="ui-btn ui-input-btn ui-corner-all ui-shadow ui-mini theme-color-btn" style="background: #1390cf" id="div4" onclick="highlight_Control('div4')"> <img src="assets/img/images.png" alt="Party Ledger"></div></a>
+                    </td>                               
+                    <td>
+                        <a href="#Item-Info-Search" data-transition="flip" id="A6" onclick="highlight_Control('div3')"><div class="ui-btn ui-input-btn ui-corner-all ui-shadow ui-mini theme-color-btn" style="background: #1390cf" > <img id="Img8" src="assets/img/arrow-right.png" alt="next"></div></a>
+                    </td>
+                </tr>
+            </table> 
                 </center>
             </div>
         </div>
@@ -1358,6 +1196,50 @@
             <p style="font-size: 12px;">Copyright &copy; - All Rights Reserved  www.goyalonline.com </p>
         </div>
     </div>
+    <!-- change vivek-->
+    <div data-role="page" id="appchange-pass" class="jqm-demos">
+        <div data-role="header" data-position="fixed" class="jqm-header">
+            <a data-rel="back" data-icon="carat-l" data-iconpos="notext" style="margin-left: 10px; background-color: white;">Back</a>
+            <img src="assets/img/green.gif" alt="Online" class="ui-btn-right alert-imgOn activeImg">
+            <h2 id="h11" style="color: white; padding-left: 1.8em">Change Account </h2>
+        </div>
+        <div role="main" class="ui-content">
+            <div class="body-with-shadow">
+                <center>
+                    <table class="app-set-tbl">
+                        
+                            <tr>
+                            <td colspan ="2">
+                               <center> <label > Change Password</label> </center>
+                            </td>
+                                </tr>
+                            <tr>
+                            <td><p>User Name</p></td>
+                                <td><input type="text"  data-theme="a" id="txtuser" readonly="True"></td>
+                                </tr>
+                            <tr>
+                            <td><p>Password</p></td>
+                                <td><input type="text" placeholder="Password" data-theme="a" id="txtpass" ></td>
+                                </tr>
+                            <tr>
+                            
+                                <td align="center" colspan ="2"><input type="button" onclick="update_user()" value="Update" class="theme-color-btn ui-button ui-widget ui-state-default ui-corner-all" style="background: #1390cf;padding:8px 35px 8px 35px; color:white;border:none;cursor:pointer;"  role="button" aria-disabled="false"></td>
+                              
+
+                                </tr>
+                            <tr>
+                                <td align="center" colspan ="2"><p id="up_msg" class="msgContent"> </p>  </td>
+                                </tr>
+                        
+                    </table>
+                </center>
+            </div>
+        </div>
+        <div data-role="footer" data-position="fixed" class="my-footer">
+            <p style="font-size: 12px;">Copyright &copy; - All Rights Reserved  www.goyalonline.com </p>
+        </div>
+    </div>
+
 
     <div data-role="page" id="MISRPT" class="jqm-demos">
         <div data-role="header" data-position="fixed" class="jqm-header">
@@ -1752,11 +1634,11 @@
         </div>
     </div>
 
-    <div data-role="page" id="OrderItemSearch" class="jqm-demos">
+    <div data-role="page" id="OrderItemSearch" class="jqm-demos" >
 
         <div data-role="header" data-position="fixed" class="jqm-header">
             <div>
-                <a href="#Item-cart" data-transition="flip">
+                <a href="#Item-cart" data-transition="slide">
                     <img src="assets/img/icon-cart.png" alt="Cart" class="cart-img" onclick="fun_showCart()">
                     <label onclick="fun_showCart()" id="cart-cnt-lbl" class="ui-btn-right cart-cnt-lbl" style="text-indent: 1px; padding: 5px; background-color: #4b4b4b; color: white; border-radius: 19px; font-weight: bold;"></label>
                 </a>
@@ -1794,8 +1676,8 @@
                                 </a>
                             </td>
                             <td>
-                                <a onclick="fun_showCart()">
-                                    <div class="ui-btn ui-input-btn ui-corner-all ui-shadow ui-mini" style="background: #1390cf" onclick="fun_nextItem()">
+                                <a onclick="fun_showCart()" data-transition="slide">
+                                    <div class="ui-btn ui-input-btn ui-corner-all ui-shadow ui-mini" style="background: #1390cf"  onclick="fun_nextItem()">
                                         <img id="Img2" src="assets/img/arrow-right.png" alt="next">
                                     </div>
                                 </a>
@@ -1813,6 +1695,219 @@
             <a data-icon="carat-r" data-iconpos="notext" style="float: right;" class="footer-img" onclick="fun_showCart()">next</a>
         </div>
     </div>
+
+     <div data-role="page" id="Item-cart" class="jqm-demos">
+         <div data-transition="slide" id="leftclicker" data-direction="reverse">
+        <div data-role="header" data-position="fixed" data-theme="true" class="jqm-header">
+            <h1 style="color: white;">Cart</h1>
+            <img src="assets/img/green.gif" alt="Online" class="ui-btn-right alert-imgOn activeImg">
+            <a onclick="fun_nextItem()" data-transition="slide" data-icon="plus" data-iconpos="notext" style="background-color: white;">Add</a>
+
+        </div>
+        <!-- /header -->
+        <div role="main" class="ui-content">
+            <div class="btn-div" style="margin-left: 25vw; width: 40vw;" id="Empty-basket">
+                <center>
+                    <table>
+                        <tr>
+                            <td id="td-ord" onclick="fun_nextItem()">
+                                <a><img src="assets/img/cart.png"></a>
+                                <center>
+                                    <p style="font-weight:bold;">Your Basket Is Empty. Please Add Item</p>
+                                </center>
+                            </td>
+                        </tr>
+                    </table>
+                </center>
+            </div>
+            <div id="Item-grid-table">
+                <center>
+                    <p id="itm-cnt" style="margin-top:-8px;margin-bottom:0px;"></p>
+                    <table style="width:90%" id="cart-tbl-amt">
+                        <tr>
+                            <td><label>GrossAmt</label></td>
+                            <td style="float:right"><label id="cart-grs" style="color:#1390cf;margin-right:1vmin"></label></td>
+                            <td><label>NetAmt</label></td>
+                            <td style="float:right"><label id="cart-net" style="color:#1390cf"></label></td>
+                        </tr>
+                    </table>
+                    <label id="cart-total-amt" style="color:#1390cf;margin-top:5px;"></label>
+                    <img alt="Prescription" id="order_pre" style="display:none;width:150px;height:150px;" src="icon.png"/>
+                </center>
+                <div data-theme="b" class="my-page" style="margin-top: -32px;">
+
+                    <div role="main" class="ui-content" style="overflow-x: visible; width: 90%" id="grid_Ord">
+                        <ul data-role="listview" data-inset="true" id="Itm_Grid" class="touch" data-icon="false" data-split-icon="delete"></ul>
+                    </div>
+                    <div role="main" class="ui-content" style="overflow-x: visible; width: 90%" id="grid_Wsal">
+                        <ul data-role="listview" data-inset="true" id="Itm_GridWSale" class="touch" data-icon="false" data-split-icon="delete"></ul>
+                    </div>
+                    <div role="main" class="ui-content" style="overflow-x: visible; width: 90%" id="grid_Sale">
+                        <ul data-role="listview" data-inset="true" id="Itm_GridSale" class="touch" data-icon="false" data-split-icon="delete"></ul>
+                    </div>
+                    <div role="main" class="ui-content" style="overflow-x: visible; width: 90%" id="grid_QTTN">
+                        <ul data-role="listview" data-inset="true" id="Itm_GridQTTN" class="touch" data-icon="false" data-split-icon="delete"></ul>
+                    </div>
+                    <div role="main" class="ui-content" style="overflow-x: visible; width: 90%" id="grid_QTNW">
+                        <ul data-role="listview" data-inset="true" id="Itm_GridQTNW" class="touch" data-icon="false" data-split-icon="delete"></ul>
+                    </div>
+                    <table class="ui-content" style="margin-top: -30px; margin-left: 10px; padding: 0; width: 90%;">
+                        <tr>
+                            <td>
+                                <a data-transition="slide">
+                                    <div class="ui-btn ui-input-btn ui-corner-all ui-shadow " style="background: #1390cf" onclick="fun_nextItem()">
+                                        <img id="Add-item" src="assets/img/add.png" alt="Add Item">
+                                    </div>
+                                </a>
+                            </td>
+                            <!--<td id="td-invioce-nxt">
+                                <a ><div id="div-img-save" class="ui-btn ui-input-btn ui-corner-all ui-shadow" style="background: #1390cf" ><img id="save" src="assets/img/arrow-right.png" alt="Save"></div></a>
+                            </td>-->
+                            <td id="td-order-nxt">
+
+                                <a id="id_aPTDR-body" href="#PTDR-Info-Search" data-transition="flip" data-position-to="window" style="display: none"></a>
+                                <a id="id_ainvoice-item-btn2-body" href="#invoice-item-btn2-body" data-rel="popup" data-transition="flip" data-position-to="window" style="display: none"></a>
+                                <a id="A5" href="#DivordType" data-rel="popup" data-transition="flip" data-position-to="window" style="display: none"></a>
+                                <a>
+                                    <div onclick="nxt_itemCart()" class="ui-btn ui-input-btn ui-corner-all ui-shadow  ui-mini" style="background: #1390cf">
+                                        <img src="assets/img/arrow-right.png" alt="nxt">
+                                    </div>
+                                </a>
+                            </td>
+                            <td>
+                                <a>
+                                    <div class="ui-btn ui-input-btn ui-corner-all ui-shadow" style="background: #1390cf" onclick="fun_cancel()">
+                                        <img id="Cancel-tmgrid" src="assets/img/cancel1.png" alt="Canecl">
+                                    </div>
+                                </a>
+                            </td>
+                        </tr>
+
+                    </table>
+
+                    <button style="display: none;" class="show-page-loading-msg" data-theme="b" data-textonly="false" data-textvisible="true" data-msgtext="Saving Data..." data-inline="true">B</button>
+                    <button style="display: none;" class="hide-page-loading-msg" data-inline="true" data-icon="delete">Hide</button>
+                </div>
+            </div>
+
+        </div>
+        <!-- /content -->
+        <div id="confirm" class="ui-content" data-role="popup" data-theme="a">
+            <p id="question">Are you sure you want to delete this item?</p>
+            <div class="ui-grid-a">
+                <div class="ui-block-a">
+                    <a id="yes" class="ui-btn ui-corner-all ui-mini ui-btn-a" data-rel="back">Yes</a>
+                </div>
+                <div class="ui-block-b">
+                    <a id="cancel" class="ui-btn ui-corner-all ui-mini ui-btn-a" data-rel="back">Cancel</a>
+                </div>
+            </div>
+        </div>
+        <!-- /popup -->
+        <div data-role="popup" id="DivordType" data-dismissible="false" data-theme="a" data-overlay-theme="b">
+            <a id="close_DivordType" class="jqm-search-link ui-btn ui-btn-icon-notext ui-corner-all ui-icon-delete ui-nodisc-icon ui-alt-icon ui-btn-right close-img " style="background-color: #1390cf;" data-rel="back"></a>
+            <div class="ui-field-contain" style="margin: 15px; width: 257px;">
+                <label for="Select1">Order Type:</label>
+                <select id="Select1" data-native-menu="false" class="filterable-select" onchange="SaveOrderType(this)">
+                </select>
+                <div id="divOrderPTDR">
+                    <table>
+                        <tr>
+                            <td>Patient:
+                            </td>
+                            <td>
+                                <input type="text" id="ordPatient" placeholder="Patient Name..." data-theme="a" data-type="search" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Doctor:
+                            </td>
+                            <td>
+                                <input type="text" id="ordDoctor" placeholder="Doctor Name..." data-theme="a" data-type="search" />
+                                <div id="Div13" style="width: 90%" class="display-none">
+                                    <label style="margin-top: -5px;" id="Label6"></label>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <br />
+                <center>
+                    <a onclick="show_SaveWin()" style="background: #1390cf;padding:5px 35px 5px 35px; color:white;border:none;cursor:pointer;text-decoration:none">OK</a>
+                </center>
+            </div>
+        </div>
+        <div data-role="popup" id="invoice-item-btn2-body" data-dismissible="false" data-theme="a" data-overlay-theme="b">
+            <a class="jqm-search-link ui-btn ui-btn-icon-notext ui-corner-all ui-icon-delete ui-nodisc-icon ui-alt-icon ui-btn-right close-img " style="background-color: #1390cf;" data-rel="back"></a>
+
+            <table class="ui-content" style="width: 90%;">
+                <tr>
+                    <td onclick="SaveOrderWsale('0')">
+                        <div class="ui-btn ui-input-btn ui-corner-all ui-shadow " style="background: #1390cf">
+                            <img id="savef" src="assets/img/save.png" alt="Save">
+                        </div>
+                    </td>
+                    <td onclick="SaveOrderWsale('1')">
+                        <div class="ui-btn ui-input-btn ui-corner-all ui-shadow " style="background: #1390cf">
+                            <img id="print" src="assets/img/print.png" alt="Save&Print">
+                        </div>
+                    </td>
+                    <td>
+                        <div class="ui-btn ui-input-btn ui-corner-all ui-shadow" style="background: #1390cf" onclick="fun_cancel()">
+                            <img id="Cancelf" src="assets/img/cancel.png" alt="Canecl">
+                        </div>
+                    </td>
+                </tr>
+            </table>
+
+        </div>
+
+
+        <div data-role="panel" id="div-Detail-Ord" data-position="right" data-display="push" data-theme="a">
+            <div class="ord-header">
+                <label style="margin-left: 2.2em">Voucher Details</label>
+            </div>
+            <div class="ord-det">
+                <p>Sale Rep</p>
+                <a>
+                    <label id="d-lbl-salerep"></label>
+                </a>
+                <p>Party Name</p>
+                <a onclick="show_PartyWin()" data-transition="flip">
+                    <label id="d-lbl-party"></label>
+                </a>
+                <p>Cart Details</p>
+                <a data-rel="close">
+                    <label id="d-lbl-cnt" class="cart-cnt-lbl"></label>
+                </a>
+                <div id="ImgDiv">
+                    <div class="full_image">
+                        <img id="Img15" alt="NoImage" onclick="FullSize()" style="width: 150px; height: 100px" />
+                        <a href="#" class="full_close" style="font-size: small" onclick="Close_img()">X</a>
+                    </div>
+                    <a href="#ImageSelect" data-transition="flip">
+                        <div class="ui-btn ui-input-btn ui-corner-all ui-shadow  ui-mini" style="background: #1390cf; padding: 5px; width: 40px; float: right; display: inline; margin-top: 0px;" id="div14">
+                            <img src="assets/img/images.png" alt="Browse Image">
+                        </div>
+                    </a>
+                </div>
+                <p>Bill Amount</p>
+                <span>
+                    <img src="assets/img/rupee.png" alt="Rs" class="rupes" />
+                </span><span class="amt-color" id="d-lbl-amt"></span>
+            </div>
+        </div>
+
+        <div data-role="footer" data-position="fixed" class="my-footer">
+            <a onclick="BackButton()" data-icon="carat-l" data-iconpos="notext" style="float: left;" class="footer-img">Back</a>
+            <a onclick="homePage()" data-transition="flip" data-icon="home" data-iconpos="notext" class="footer-img">home</a>
+            <a data-icon="check" data-iconpos="notext" onclick="Save()" class="footer-img">Save</a>
+            <a data-icon="action" data-iconpos="notext" class="footer-img" onclick="fun_cancel()">exit</a>
+            <!--<a href="#invoice-item-btn2-body" data-rel="popup" data-transition="flip" data-position-to="window" data-icon="carat-r" data-iconpos="notext" class="footer-img">next</a>-->
+            <!--<a href="#div-Detail-Ord" data-icon="eye" data-iconpos="notext" style="float: right;" class="footer-img" onclick="SetInvoiceDtl()">Back</a>-->
+            <a onclick="BackButton()" data-icon="carat-r" data-iconpos="notext" style="float: right;" class="footer-img">next</a>
+        </div>
+    </div></div>
 
     <div data-role="page" id="Receipt-part1" class="jqm-demos">
 
