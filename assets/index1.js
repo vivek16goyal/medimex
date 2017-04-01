@@ -15,8 +15,8 @@ var APPType = "$";
 //var pDocReq = "0";
 
 //  2)///////*******A to Z Dava Healing touch medico **********************//////////
-var Heading = "A to Z Dava";
-var PCODE = "RSHT01";
+var Heading = "ULTIMED";
+var PCODE = "Dem010";
 var FolderName = PCODE;
 var HomeSlideCnt = "1";
 var pDiscOnOrder = "1";
@@ -157,6 +157,22 @@ function onDeviceReady() {
         alert(e.message);
     }
 
+}
+function cliencode_check() {
+    var clientCode = localStorage.getItem("ClientCode");
+    if (clientCode == null || clientCode == "") {
+        window.location = "index01.html";
+    }
+    else {
+        var sp = clientCode.substring(0, 1);
+        if (sp == "2") {
+            window.location = "Retailer.html";
+        }
+        else {
+            window.location = "SRepresentation.html"
+        }
+
+    }
 }
 
 function Forward() {
