@@ -158,22 +158,7 @@ function onDeviceReady() {
     }
 
 }
-function cliencode_check() {
-    var clientCode = localStorage.getItem("ClientCode");
-    if (clientCode == null || clientCode == "") {
-        window.location = "index01.html";
-    }
-    else {
-        var sp = clientCode.substring(0, 1);
-        if (sp == "2") {
-            window.location = "Retailer.html";
-        }
-        else {
-            window.location = "SRepresentation.html"
-        }
 
-    }
-}
 function Forward() {
     $(".hide-page-loading-msg").click();
     var link = window.location.href.toString();
@@ -250,7 +235,22 @@ function Clear_OrderDetail() {
     $("#lbl-cart-cnt").text("0");
     $("#lbl-cart-cnt1").text("0");
 }
+function cliencode_check() {
+    var clientCode = localStorage.getItem("ClientCode");
+    if (clientCode == null || clientCode == "") {
+        window.location = "index01.html";
+    }
+    else {
+        var sp = clientCode.substring(0, 1);
+        if (sp == "2") {
+            window.location = "Retailer.html";
+        }
+        else {
+            window.location = "SRepresentation.html"
+        }
 
+    }
+}
 function HideWaiting() {
     pictureSource = navigator.camera.PictureSourceType;
     destinationType = navigator.camera.DestinationType;
