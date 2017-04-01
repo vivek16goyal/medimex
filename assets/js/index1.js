@@ -1453,8 +1453,8 @@ function Register() {
         var Address = $("#txtadd").val();
         var Email = $("#txtemail").val();
         var state = $("#selState").val();
-        //var DrName = $("#txtDocName").val();
-        //var DrCode = localStorage.getItem("DocCode");
+        var DrName = $("#txtDocName").val();
+        var DrCode = localStorage.getItem("DocCode");
         if (localStorage.getItem("Stcode") != "" && localStorage.getItem("Stcode") != null) {
             state = localStorage.getItem("Stcode");
         }
@@ -1467,7 +1467,7 @@ function Register() {
             area = localStorage.getItem("Acode");
         }
         $.ajax({
-            url: GBCServicePath + "/Values/RegisterCustmoer?name=" + Name + "&Add=" + Address + "&email=" + Email + "&phone=" + MoNo + "&AppType=" + APPType + "&PCODE=" + PCODE + "&Stcode=" + state + "&CtCode=" + city + "&area=" + area + "&deviceId =" + localStorage.getItem("DeviceId"),
+            url: GBCServicePath + "/Values/RegisterCustmoer?name=" + Name + "&Add=" + Address + "&email=" + Email + "&phone=" + MoNo + "&Pass= &AppType=" + APPType + "&PCODE=" + PCODE + "&Stcode=" + state + "&CtCode=" + city + "&area=" + area + "&deviceId =" + localStorage.getItem("DeviceId") + "&DrName=" + DrName + "&DrCode=" + DrCode,
             type: "GET",
             dataType: "json",
             cache: false,
@@ -1478,7 +1478,7 @@ function Register() {
                 else {
                     try{
                         localStorage.setItem("PTNAME", Name);
-                        
+                        localStorage.setItem("PTCODE", data);
                         localStorage.setItem("PTNO", MoNo);
                         localStorage.setItem("PTEMAIL", Email);
                         localStorage.setItem("PTADD", Address);
