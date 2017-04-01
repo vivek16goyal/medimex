@@ -158,7 +158,22 @@ function onDeviceReady() {
     }
 
 }
+function cliencode_check() {
+    var clientCode = localStorage.getItem("ClientCode");
+    if (clientCode == null || clientCode == "") {
+        window.location = "index01.html";
+    }
+    else {
+        var sp = clientCode.substring(0, 1);
+        if (sp == "2") {
+            window.location = "Retailer.html";
+        }
+        else {
+            window.location = "SRepresentation.html"
+        }
 
+    }
+}
 function Forward() {
     $(".hide-page-loading-msg").click();
     var link = window.location.href.toString();
